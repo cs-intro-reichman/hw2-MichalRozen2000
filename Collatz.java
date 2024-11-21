@@ -32,7 +32,7 @@ public class Collatz {
 
 				}
 				if (concise){
-					System.out.println("For " + i + ", steps to reach 1: " + (count + 1)); 
+					System.out.println("For " + i + ", steps to reach 1: " + (count)); 
 				}
 			}
 
