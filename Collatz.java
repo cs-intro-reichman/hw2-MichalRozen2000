@@ -10,38 +10,41 @@ public class Collatz {
 			for (int i=1; i<=N; i++){
 				number = i;
 				int count = 0;
+
 				if (verbose){
 				System.out.print(number+" ");
+				}
+
 				while (number != 1) {  
                     if (number % 2 == 0) {
                         number /= 2; 
                     } else {
                         number = (number * 3) + 1; 
                     }
+
+					if (verbose){
                     System.out.print(number + " "); 
-                    count++;
-				
 					}
-					System.out.println("(" + (count+1) + ")");
+
+                    count++;
+				}
+				if (verbose) {
+					System.out.println("(" + (count) + ")");
 
 				}
 				if (concise){
-					number = i;
-					count = 0;
-					while (number !=1){
-						if (number % 2 == 0){
-							number /=2;
-						} else {
-							number = (number*3) + 1;
-						}
-						count++;
-					}
-					System.out.println("For " + i + ", steps to reach 1: " + (count + 1));
+					System.out.println("For " + i + ", steps to reach 1: " + (count + 1)); 
 				}
-
 			}
-		}
 
-	}
+			if (concise){
+				System.out.println("Every one of the first " + N + " hailstone sequences reached 1.");
+			}
+
+	   }
+}
+		
+
+	
 
 	
