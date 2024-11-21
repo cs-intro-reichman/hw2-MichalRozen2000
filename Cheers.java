@@ -12,7 +12,7 @@ public class Cheers {
                 while (spelling < word.length()) {
                     char Letter = word.charAt(spelling);
     
-                    tone = "a";  
+                    tone = "a ";  
                     if (specialLetters.indexOf(Letter) != -1) {
                         tone = "an";  
                     }
